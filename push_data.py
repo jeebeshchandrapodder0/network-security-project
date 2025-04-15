@@ -57,21 +57,3 @@ if __name__ == "__main__":
     records = networkobj.csv_to_json_convertor(file_path=FILE_PATH)
     no_of_records = networkobj.insert_data_mongodb(records, DATABASE, COLLECTION)
     print(f"No of records inserted: {no_of_records}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,3 @@
+[ 2025-04-15 22:09:29,990 ] 15 root - INFO - Starting data ingestion pipeline
+[ 2025-04-15 22:09:29,991 ] 37 root - ERROR - Error in data ingestion pipeline: join() argument must be str, bytes, or os.PathLike object, not 'datetime'
+[ 2025-04-15 22:09:29,991 ] 44 root - ERROR - Pipeline failed: Error occured in python script name [F:\MLOPS\network-security-cursor\main.py] line number [18] error message [join() argument must be str, bytes, or os.PathLike object, not 'datetime']
