@@ -1,0 +1,12 @@
+[ 2025-04-18 17:01:25,487 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-04-18 17:01:25,492 ] 107 dagshub - INFO - Accessing as jeebeshchandrapodder
+[ 2025-04-18 17:01:25,918 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-04-18 17:01:25,925 ] 107 dagshub - INFO - Accessing as jeebeshchandrapodder
+[ 2025-04-18 17:01:26,347 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/jeebeshchandrapodder/network-security-project "HTTP/1.1 200 OK"
+[ 2025-04-18 17:01:26,765 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/jeebeshchandrapodder/network-security-project "HTTP/1.1 200 OK"
+[ 2025-04-18 17:01:27,146 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-04-18 17:01:27,149 ] 107 dagshub - INFO - Initialized MLflow to track repo "jeebeshchandrapodder/network-security-project"
+[ 2025-04-18 17:01:27,150 ] 107 dagshub - INFO - Repository jeebeshchandrapodder/network-security-project initialized!
+[ 2025-04-18 17:01:27,523 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-04-18 17:01:27,525 ] 107 dagshub - INFO - Initialized MLflow to track repo "jeebeshchandrapodder/network-security-project"
+[ 2025-04-18 17:01:27,526 ] 107 dagshub - INFO - Repository jeebeshchandrapodder/network-security-project initialized!
