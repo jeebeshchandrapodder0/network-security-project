@@ -1,18 +1,16 @@
-import sys
-import os
-from dotenv import load_dotenv
-
 from networksecurity.components.data_ingestion import DataIngestion
 from networksecurity.components.data_validation import DataValidation
-from networksecurity.entity.config_entity import DataIngestionConfig,DataValidationConfig
-from networksecurity.entity.config_entity import TrainingPipelineConfig
+from networksecurity.components.data_transformation import DataTransformation
 from networksecurity.exception.exception import NetworkSecurityException
+
 from networksecurity.logging.logger import logging
+from networksecurity.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig
+from networksecurity.entity.config_entity import TrainingPipelineConfig
+ 
 
-# Load environment variables
-load_dotenv()
+import sys
 
-def main():
+if __name__=='__main__':
     try:
         trainingpipelineconfig=TrainingPipelineConfig()
         dataingestionconfig=DataIngestionConfig(trainingpipelineconfig)
@@ -26,15 +24,12 @@ def main():
         logging.info("Initiate the data Validation")
         data_validation_artifact=data_validation.initiate_data_validation()
         logging.info("data Validation Completed")
-        print(data_validation_artifact)
-        
+        print(data_validation_artifact)   
+        data_transformation_config=DataTransformationConfig(trainingpipelineconfig)
+        logging.info("data Transformation started")
+        data_transformation=DataTransformation(data_validation_artifact,data_transformation_config)
+        data_transformation_artifact=data_transformation.initiate_data_transformation()
+        print(data_transformation_artifact)
+        logging.info("data Transformation completed") 
     except Exception as e:
-        logging.error(f"Error in data ingestion pipeline: {str(e)}")
-        raise NetworkSecurityException(e, sys)
-
-if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        logging.error(f"Pipeline failed: {str(e)}")
-        sys.exit(1)
+           raise NetworkSecurityException(e,sys)
