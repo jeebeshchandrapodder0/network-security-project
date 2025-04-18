@@ -7,3 +7,8 @@ certifi
 scikit-learn
 
 ##-e .
+
+##data validation
+scikit-learn
+dill
+pyyaml
